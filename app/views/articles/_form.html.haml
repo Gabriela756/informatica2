@@ -1,0 +1,90 @@
+= form_for @article do |f|
+	- if @article.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+			%ul
+				- @article.errors.full_messages.each do |msg|
+					%li= msg
+	.container
+		.row
+			.col-lg-12
+				%h3.text-center.label-info Informacion del accidente
+				.form-group
+					= f.label :accident_fecha, "Fecha y hora de Ocurrido el hecho :  "
+					= f.datetime_select :accident_fecha, class: "form-control"
+				.form-group
+					= f.label :arrivo, "Fecha y hora de arrivo al lugar del hecho : "
+					= f.datetime_select :arrivo, class: "form-control"
+				.form-group
+					= f.label :lugar, "Lugar del hecho : "
+					= f.text_field :lugar, class: "form-control"
+				.form-group
+					= f.label :calzada_estado, "Estado de la calzada : "
+					= f.text_field :calzada_estado, class: "form-control"
+				.form-group
+					= f.label :visibilidad, "Visibilidad :"
+					= f.text_field :visibilidad, class: "form-control"
+				.form-group
+					= f.label :cover, "Plano :"
+					= f.file_field :cover
+				.form-group
+					= f.label :color
+					= f.color_field :color
+			.col-lg-12
+				%h3.text-center.label-info Protagonistas
+			.col-lg-6
+				%h4.text-center.label-danger Envistente
+				.form-group
+					= f.label :envistente, "Envistente :"
+					= f.text_field :envistente, class: "form-control"
+				.form-group
+					= f.label :envistente_v, "Vehiculo :"
+					= f.text_field :envistente_v, class: "form-control"
+				.form-group
+					= f.label :envistente_v_marca, "Marca del Vehiculo :"
+					= f.text_field :envistente_v_marca, class: "form-control"
+				.form-group
+					= f.label :envistente_v_modelo, "Modelo del Vehiculo :"
+					= f.text_field :envistente_v_modelo, class: "form-control"
+				.form-group
+					= f.label :envistente_v_patente, "Patente del Vehiculo : "
+					= f.text_field :envistente_v_patente, class: "form-control"
+				.form-group
+					= f.label :envistente_v_img, "Imagen del Vehiculo"
+					= f.file_field :envistente_v_img
+			.col-lg-6
+				%h4.text-center.label-warning Envestido
+				.form-group
+					= f.label :envestido, "Envestido : "
+					= f.text_field :envestido, class: "form-control"
+				.form-group
+					= f.label :envestido_v, "Vehiculo : "
+					= f.text_field :envestido_v, class: "form-control"
+				.form-group
+					= f.label :envestido_v_marca, "Marca del Vehiculo : "
+					= f.text_field :envestido_v_marca, class: "form-control"
+				.form-group
+					= f.label :envestido_v_modelo, "Modelo del Vehiculo :"
+					= f.text_field :envestido_v_modelo, class: "form-control"
+				.form-group
+					= f.label :envestido_v_patente, "Patente del Vehiculo :"
+					= f.text_field :envestido_v_patente, class: "form-control"
+				.form-group
+					= f.label :envestido_v_img, "Imagen del Vehiculo"
+					= f.file_field :envestido_v_img
+			.col-lg-12
+				%h3.text-center.label-info Detalles
+				.form-group
+					= f.label :caracteristicas
+					= f.text_area :caracteristicas, class: "form-control", rows:"10"
+				.col-lg-6
+					.form-group
+						= f.label :latitud, "Latitud"
+						= f.text_field :latitud, class: "form-control"
+				.col-lg-6
+					.form-group
+						= f.label :longitud
+						= f.text_field :longitud, class: "form-control"
+	
+		.actions
+			= f.submit 'Archivar',class: "btn btn-default"

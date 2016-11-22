@@ -1,0 +1,85 @@
+%h1.text-center Caso Accidentologia # #{@article.id}
+.container
+	.row
+		.col-lg-6{style:"background-color:#{@article.color}"}
+			%h2.text-center.label-info.margin-top PLANO
+			=image_tag "#{@article.cover.url()}", style: "max-width: 100%; height: auto"
+			%br
+			%br
+			%p
+				%b Detalles :
+				#{@article.caracteristicas}
+		.col-lg-6
+			%h2.label-info.text-center Detalles
+
+			%p 
+				%b Lugar del accidente : 
+				#{@article.lugar}
+			%p 
+				%b Fecha y hora del accidente : 
+				#{@article.accident_fecha.strftime("%d / %m / %y - %H:%M")}
+			%p 
+				%b Fecha y hora de Arrivo al lugar : 
+				#{@article.arrivo.strftime("%d / %m / %y - %H:%M")}
+			%p
+				%b Estado de la Calzada :
+				#{@article.calzada_estado}
+			%p
+				%b Visibilidad :
+				#{@article.visibilidad}
+
+			%h2.label-warning.text-center Envistente
+			%p
+				%b Nombre y Apellido (edad) : 
+				= @article.envistente
+			%p
+				%b Vehiculo :
+				= @article.envistente_v
+			%p
+				%b Marca y Modelo
+				#{@article.envistente_v_marca} #{@article.envistente_v_modelo}
+			%p
+				%b Patente :
+				= @article.envistente_v_patente
+			%p.text-right
+				%button(type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal") Vehiculo
+			.modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+				.modal-dialog(role="document")
+					.modal-content
+						.modal-header
+							%button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+								%span(aria-hidden="true") &times;
+							%h4.modal-title.text-center#myModalLabel #{@article.envistente_v_marca} #{@article.envistente_v_modelo}
+						.modal-body
+							=image_tag "#{@article.envistente_v_img.url()}", style: "max-width: 100%; width: auto"
+
+			%h2.label-danger.text-center Envestido
+			%p
+				%b Nombre y Apellido (edad) : 
+				= @article.envestido
+			%p
+				%b Vehiculo :
+				= @article.envestido_v
+			%p
+				%b Marca y Modelo
+				#{@article.envestido_v_marca} #{@article.envestido_v_modelo}
+			%p
+				%b Patente :
+				= @article.envestido_v_patente
+			%p.text-right
+				%button(type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal2") Vehiculo
+			.modal.fade#myModal2(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+				.modal-dialog(role="document")
+					.modal-content
+						.modal-header
+							%button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+								%span(aria-hidden="true") &times;
+							%h4.modal-title.text-center#myModalLabel #{@article.envestido_v_marca} #{@article.envestido_v_modelo}
+						.modal-body
+							=image_tag "#{@article.envestido_v_img.url()}", style: "max-width: 100%; width: auto"
+
+%script
+:javascript
+	$('#myModal2').on('shown.bs.modal', function () {
+		$('#myInput').focus()
+	})

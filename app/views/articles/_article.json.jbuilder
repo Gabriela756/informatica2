@@ -1,0 +1,2 @@
+json.extract! article, :id, :accident_fecha, :arrivo, :lugar, :envestido, :envistente, :calzada_estado, :visibilidad, :caracteristicas, :cover, :color, :latitud, :longitud, :envestido_v, :envistente_v, :envestido_v_marca, :envistente_v_marca, :envestido_v_modelo, :envistente_v_modelo, :envestido_v_patente, :envistente_v_patente, :envestido_v_img, :envistente_v_img, :created_at, :updated_at
+json.url article_url(article, format: :json)

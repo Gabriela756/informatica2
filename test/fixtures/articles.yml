@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accident_fecha: 2016-11-22 01:26:31
+  arrivo: 2016-11-22 01:26:31
+  lugar: MyString
+  envestido: MyString
+  envistente: MyString
+  calzada_estado: MyString
+  visibilidad: MyString
+  caracteristicas: MyText
+  cover: 
+  color: MyString
+  latitud: MyString
+  longitud: MyString
+  envestido_v: MyString
+  envistente_v: MyString
+  envestido_v_marca: MyString
+  envistente_v_marca: MyString
+  envestido_v_modelo: MyString
+  envistente_v_modelo: MyString
+  envestido_v_patente: MyString
+  envistente_v_patente: MyString
+  envestido_v_img: 
+  envistente_v_img: 
+
+two:
+  accident_fecha: 2016-11-22 01:26:31
+  arrivo: 2016-11-22 01:26:31
+  lugar: MyString
+  envestido: MyString
+  envistente: MyString
+  calzada_estado: MyString
+  visibilidad: MyString
+  caracteristicas: MyText
+  cover: 
+  color: MyString
+  latitud: MyString
+  longitud: MyString
+  envestido_v: MyString
+  envistente_v: MyString
+  envestido_v_marca: MyString
+  envistente_v_marca: MyString
+  envestido_v_modelo: MyString
+  envistente_v_modelo: MyString
+  envestido_v_patente: MyString
+  envistente_v_patente: MyString
+  envestido_v_img: 
+  envistente_v_img: 
