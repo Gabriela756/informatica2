@@ -51,7 +51,7 @@
 								%span(aria-hidden="true") &times;
 							%h4.modal-title.text-center#myModalLabel #{@article.envistente_v_marca} #{@article.envistente_v_modelo}
 						.modal-body
-							=image_tag "#{@article.envistente_v_img.url()}", style: "max-width: 100%; width: auto"
+							=image_tag "#{@article.envistente_v_img.url()}", style: "max-width: 100%; width: auto", class: "center-block img-responsive img-rounded"
 
 			%h2.label-danger.text-center Envestido
 			%p
@@ -76,7 +76,7 @@
 								%span(aria-hidden="true") &times;
 							%h4.modal-title.text-center#myModalLabel #{@article.envestido_v_marca} #{@article.envestido_v_modelo}
 						.modal-body
-							=image_tag "#{@article.envestido_v_img.url()}", style: "max-width: 100%; width: auto"
+							=image_tag "#{@article.envestido_v_img.url()}", style: "max-width: 100%; width: auto", class: "center-block img-responsive img-rounded"
 
 %script
 :javascript
