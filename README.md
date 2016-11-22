@@ -49,4 +49,3 @@ Este trabajo consiste en generar una base de datos con casos relacionados con si
 		* Patente
 
 		* Imagen
-
