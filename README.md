@@ -1,24 +1,29 @@
-# README
+# Accidental crashes DB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Trabajo de Base de Datos con interfaz web para la catedra Informatica 2 de Lic. en Criminalistica de la UCASAL.
 
-Things you may want to cover:
+Este trabajo consiste en generar una base de datos con casos relacionados con siniestros viales, donde se detalla informacion de :
 
-* Ruby version
+* Lugar
 
-* System dependencies
+* Fecha y Hora del Accidente
 
-* Configuration
+* Fecha y Hora de arrivo al lugar del accidente
 
-* Database creation
+* Condiciones de la calzada
 
-* Database initialization
+* Visibilidad
 
-* How to run the test suite
+* Latitud y Longitud (para futuros usos con Google Maps).
 
-* Services (job queues, cache servers, search engines, etc.)
+* Imagen de Plano.
 
-* Deployment instructions
+* Caracterisiticas del hecho
 
-* ...
+* Protagonistas
+
+** Envestido
+
+*** Nombre y Apellido (edad)
+
+*** 
