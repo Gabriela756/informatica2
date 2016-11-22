@@ -22,8 +22,10 @@ Este trabajo consiste en generar una base de datos con casos relacionados con si
 
 * Protagonistas
 
-** Envestido
+* * Envestido
 
-*** Nombre y Apellido (edad)
+* * * Nombre y Apellido (edad)
 
-*** 
+* * * Vehiculo
+
+* * * Marca 
